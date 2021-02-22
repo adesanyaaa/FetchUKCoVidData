@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">FetchUKCoVidData</string>
+    <string name="app_name">Fetch UKCoVid Data</string>
+    <string name="description">UK COVID-19 cases per day</string>
 </resources>
