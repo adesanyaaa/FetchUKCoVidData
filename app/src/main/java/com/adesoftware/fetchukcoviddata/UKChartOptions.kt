@@ -1,7 +1,7 @@
 package com.adesoftware.fetchukcoviddata
 
 enum class Metric {
-    POSITIVE, DEATH
+    CASE, DEATH
 }
 
 enum class TimeScale(val numDays: Int) {

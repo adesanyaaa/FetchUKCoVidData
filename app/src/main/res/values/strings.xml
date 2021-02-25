@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">Fetch UKCoVid Data</string>
     <string name="description">UK COVID-19 cases per day</string>
+    <string name="cases">Cases</string>
+    <string name="deaths">Deaths</string>
+    <string name="oneweek">1 Week</string>
+    <string name="onemonth">1 Month</string>
+    <string name="max">Max</string>
 </resources>

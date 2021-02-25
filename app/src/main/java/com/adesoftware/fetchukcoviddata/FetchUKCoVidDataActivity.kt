@@ -142,7 +142,7 @@ class FetchUKCoVidDataActivity : AppCompatActivity() {
 
         radioGroupMetricSelection.setOnCheckedChangeListener { group, checkedId ->
             when (checkedId) {
-                R.id.radioButtonPositive -> updateDisplayMetric(Metric.POSITIVE)
+                R.id.radioButtonCase -> updateDisplayMetric(Metric.CASE)
                 R.id.radioButtonDeath -> updateDisplayMetric(Metric.DEATH)
             }
         }
@@ -152,7 +152,7 @@ class FetchUKCoVidDataActivity : AppCompatActivity() {
     private fun updateDisplayMetric(metric: Metric) {
         //Update the color of the chart
         val colorRes = when (metric) {
-            Metric.POSITIVE -> R.color.colorPositive
+            Metric.CASE -> R.color.colorCase
             Metric.DEATH-> R.color.colorDeath
         }
 
@@ -175,15 +175,15 @@ class FetchUKCoVidDataActivity : AppCompatActivity() {
         adapter = UKCoVidSparkAdapter(dailyData)
         sparkView.adapter = adapter
         //Update radio buttons to select the positive cases and max time by default
-        radioButtonPositive.isChecked = true
+        radioButtonCase.isChecked = true
         radioButtonMax.isChecked = true
         //Display metric for most recent date
-        updateDisplayMetric(Metric.POSITIVE)
+        updateDisplayMetric(Metric.CASE)
     }
 
     private fun updateInfoForDate(coVidData: UKCoVidData) {
         val numCases = when (adapter.metric) {
-            Metric.POSITIVE -> coVidData.cases
+            Metric.CASE -> coVidData.cases
             Metric.DEATH -> coVidData.deathIncrease
         }
         tickerView.text = NumberFormat.getInstance().format(numCases)

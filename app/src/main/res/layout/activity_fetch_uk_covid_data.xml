@@ -43,18 +43,18 @@
         app:layout_constraintTop_toBottomOf="@id/tvSelectRegion">
 
         <RadioButton
-            android:id="@+id/radioButtonPositive"
+            android:id="@+id/radioButtonCase"
             style="@style/CustomRadioButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Positive" />
+            android:text="@string/cases" />
 
         <RadioButton
             android:id="@+id/radioButtonDeath"
             style="@style/CustomRadioButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Deaths" />
+            android:text="@string/deaths" />
     </RadioGroup>
 
     <com.robinhood.spark.SparkView
@@ -85,21 +85,21 @@
             style="@style/CustomRadioButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="1 Week" />
+            android:text="@string/oneweek" />
 
         <RadioButton
             android:id="@+id/radioButtonMonth"
             style="@style/CustomRadioButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="1 Month" />
+            android:text="@string/onemonth" />
 
         <RadioButton
             android:id="@+id/radioButtonMax"
             style="@style/CustomRadioButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Max" />
+            android:text="@string/max" />
     </RadioGroup>
 
     <TextView
@@ -122,6 +122,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/tvDateLabel"
-        tools:text="4,354" />
+        tools:text="2,222" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

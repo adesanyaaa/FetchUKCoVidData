@@ -5,7 +5,7 @@ import com.robinhood.spark.SparkAdapter
 
 class UKCoVidSparkAdapter(private val dailyData: List<UKCoVidData>): SparkAdapter() {
 
-    var metric = Metric.POSITIVE
+    var metric = Metric.CASE
     var daysAgo = TimeScale.MAX
 
     override fun getItem(index: Int) = dailyData[index]
@@ -15,7 +15,7 @@ class UKCoVidSparkAdapter(private val dailyData: List<UKCoVidData>): SparkAdapte
     override fun getY(index: Int): Float {
         val chosenDayData = dailyData[index]
         return when(metric) {
-            //Metric.POSITIVE -> chosenDayData.deathIncrease
+            //Metric.CASE -> chosenDayData.deathIncrease
             //Metric.DEATH -> chosenDayData.deathIncrease.toFloat()
 
         }
